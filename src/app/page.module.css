@@ -44,13 +44,14 @@
   background-color: coral;
   width: 200px;
   flex-shrink: 0;
-  ul{
+  .parentNav, .childNav{
     margin: 10px;
     padding: 10px;
     margin-right: 0;
     padding-right: 0;
   }
 }
+
 .activeNavLink > a{
   border: 1px solid #fff;
 }

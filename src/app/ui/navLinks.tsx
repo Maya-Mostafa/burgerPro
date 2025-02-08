@@ -22,12 +22,12 @@ export default function NavLinks() {
     const pathname = usePathname();
 
     return (
-        <ul>
+        <ul className={styles.parentNav}>
             {links.map((link) => (
                 <li key={link.href} className={clsx({[styles['activeNavLink']]: pathname === link.href})}>  
                     <Link href={link.href}>{link.text}</Link>
                     {link.children && 
-                        <ul>
+                        <ul className={styles.childNav}>
                             {link.children.map((child) => (
                                 <li key={child.href} className={clsx({[styles['activeNavLink']]: pathname === child.href})}>
                                     <Link href={child.href}>{child.text}</Link>
